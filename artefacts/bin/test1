@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+import tensorflow as tf
+import numpy as np
+
+# numpy
+m=2
+n=3
+x = np.array([1,2])
+m = np.array([[0.1, 0.2, 0.3],[0.1, 0.2, 0.3]])
+res = np.dot(x, m)
+print res
+
+#tf
+x = tf.constant(x, dtype = tf.float32)
+m = tf.constant(m, dtype = tf.float32)
+with tf.Session() as sess:
+  #res1 = tf.matmul(x, m).eval();
+  res2 = tf.einsum('j,ji->i', x, m).eval()
+  print res2
