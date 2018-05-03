@@ -1,2 +1,5 @@
+(0) if you don't have 'virtualenv' installed, then execute:
+        pip install --user virtualenv
+    'virtualenv' installs under '~/.local'
 (1) make vcreate                       # creates virtual env for python and installs a numbert of modules
 (2) cd env; . ./setenv.sh; cd ..       # source environment - will activate the python virtual env
